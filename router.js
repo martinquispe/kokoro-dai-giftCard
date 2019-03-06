@@ -3,6 +3,7 @@
 **------------------------------------------------------*/
 const _user = require('./handlers/user');
 const _token = require('./handlers/token');
+const _web = require('./handlers/web');
 
 //const _check = require('./handlers/check');
 //const _web = require('./handlers/web');
