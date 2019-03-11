@@ -1,14 +1,10 @@
 /*------------------------------------------------------**
 ** Dependencies - Handlers                              **
 **------------------------------------------------------*/
-const _user = require('./handlers/user');
-const _token = require('./handlers/token');
-const _web = require('./handlers/web');
+const _user = require('./lib/handlers/user');
+const _token = require('./lib/handlers/token');
+const _web = require('./lib/handlers/web');
 
-//const _check = require('./handlers/check');
-//const _web = require('./handlers/web');
-//const _cart = require('./handlers/cart');
-//const _server= require('./handlers/server');
 
 const errorHandlers = {
   notFound: function(data, response) {
@@ -18,28 +14,21 @@ const errorHandlers = {
 
 const routerPaths = {
   '': _web.index,
- 
   'account/create': _web.accountCreate,
   'account/created': _web.accountCreated,
-  //'account/edit': _web.accountEdit,
-  //'api/editTimer': _web.getTimer,
-
-  //'account/deleted': _web.accountDeleted,
+  'account/edit': _web.accountEdit,
+  'account/deleted': _web.accountDeleted,
   'session/create': _web.sessionCreate,
   'session/deleted': _web.sessionDeleted,
-  //'checks/all': _web.checksList,
-  //'checks/create': _web.checksCreate,
-  //'checks/edit': _web.checksEdit,
- 
+  'rules/all': _web.rulesList,
+  'rules/create': _web.rulesCreate,
+  'rules/edit': _web.rulesEdit,
+  'gift/all': _web.giftList,
   'api/users': _user.handlers,
-  //'api/tokens': _token.handlers,
-  //'api/checks': _check.handlers,
-  //'api/carts' : _cart.handlers,
-
-  //'api/settings' : _server.handlers,
-
-  //'favicon.ico' : _web.favicon,
-  //'public' : _web.public
+  'api/tokens': _token.handlers,
+  'api/rules': _rules.handlers,
+  'favicon.ico' : _web.favicon,
+  'public' : _web.public
 };
 
 const router = {};
