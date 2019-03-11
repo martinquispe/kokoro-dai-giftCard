@@ -26,7 +26,7 @@ const routerPaths = {
   'gift/all': _web.giftList,
   'api/users': _user.handlers,
   'api/tokens': _token.handlers,
-  'api/rules': _check.handlers,
+  'api/rules': _rules.handlers,
   'favicon.ico' : _web.favicon,
   'public' : _web.public
 };
