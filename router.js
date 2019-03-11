@@ -5,6 +5,7 @@ const _user = require('./lib/handlers/user');
 const _token = require('./lib/handlers/token');
 const _web = require('./lib/handlers/web');
 
+
 const errorHandlers = {
   notFound: function(data, response) {
     response(404,{message: "Route not found"});
